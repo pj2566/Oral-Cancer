@@ -41,10 +41,10 @@ else:
     image = Image.open(file)
     st.image(image, use_column_width=True)
     predictions,image = import_and_predict(image, model)
-    st.write(prediction)
+    st.write(predictions)
     st.image(image, caption='Pic')
  
     print(
     "This image most likely belongs to {} with a {:.2f} percent confidence."
-    .format(class_names[np.argmax(prediction)], 100 * np.max(prediction))
+    .format(class_names[np.argmax(predictions)], 100 * np.max(predictions))
 )
