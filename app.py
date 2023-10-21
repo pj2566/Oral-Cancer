@@ -42,8 +42,8 @@ else:
     st.image(image, use_column_width=True)
     predictions,image = import_and_predict(image, model)
     
-    st.write("OSCC - {:.8f}".format(float(predictions[0][0])))
-    st.write("Normal - {:.8f}".format(float(predictions[0][1])))
+    st.write("Normal- {:.8f}".format(float(predictions[0][0]*100)))
+    st.write("OSCC - {:.8f}".format(float(predictions[0][1]*100)))
     st.image(image, caption='Pic')
  
     
