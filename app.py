@@ -28,8 +28,8 @@ def import_and_predict(image_data, model):
     image = Image.open(file)
     resize=ImageOps.fit(image, size, Image.LANCZOS)
     resize = np.asarray(resize) 
-    img = cv2.cvtColor(resize, cv2.COLOR_BGR2RGB)
-    img_reshape = img[np.newaxis,...]
+   
+    img_reshape = resize[np.newaxis,...]
     prediction=model.predict(img_reshape)
     return prediction,image
     
