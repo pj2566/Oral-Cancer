@@ -25,7 +25,7 @@ import numpy as np
 st.set_option('deprecation.showfileUploaderEncoding', False)
 def import_and_predict(image_data, model):
     size = (256,256)
-    image = Image.open('/kaggle/input/mouth-can/images.jpg')
+    image = Image.open(file)
     resize=ImageOps.fit(image, size, Image.LANCZOS)
     resize = np.asarray(resize) 
     img = cv2.cvtColor(resize, cv2.COLOR_BGR2RGB)
